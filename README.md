@@ -9,10 +9,10 @@ smartmeteradvisor.uk / 1 GB Memory / 25 GB Disk / LON1 - Ubuntu 24.10 x64
 You will need to set up DNS records for your Droplet accordingly.  In this case the nameservers were switched over at the Domain Registrar to Digital Ocean's ones which took a while to propagate through.
 
 ## Terraform recipe
-There are two primary terraform files.  They both do broadly the same thing which is to set up Wordpress with `MySQL` and `nginx` as well as `Caddy` for setting up SSL and Let's Encrypt certificate creation:
-* [`main.tf`](main.tf): Initial version with basic outline and no logging.
-* [`main2.tf`](main2.tf): Advanced version with enhanced logging and support around DNS propagation checks.
-Note that Terraform does not take `.tf` files as arguments directly but instead reads all `.tf` files in the working directory so when you run this recipe you must rename or move the `.tf` file you don't want to run.
+There are two primary terraform recipes.  They both do broadly the same thing which is to set up Wordpress with `MySQL` and `nginx` as well as `Caddy` for setting up SSL and Let's Encrypt certificate creation:
+* [`main.tf.original`](main.tf.original): Initial version with basic outline and no logging.
+* [`main.tf`](main.tf): Advanced version with enhanced logging and support around DNS propagation checks.
+Note that Terraform does not take `.tf` files as arguments directly but instead reads all `.tf` files in the working directory so the original receip has been renamed as `main.tf.original`](main.tf.original) to ensure you don't hit that condition.  If you want to run the original recipe you must rename or move [`main.tf`](main.tf).
 
 Here's the command line for executing the other one after doing that:
 ```
