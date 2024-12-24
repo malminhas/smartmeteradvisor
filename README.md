@@ -1,5 +1,5 @@
 # smartmeteradvisor
-Smart Meter Advisor website setup.
+Smart Meter Advisor website and Wordpress setup using terraform.
 
 ## Context
 This repo contains terraform HCL files that will spin up a Dockerised Wordpress stack onto a blank and very basic Digital Ocean Ubuntu-based Droplet that has been pre-created.  The Droplet version details are as follows:  
