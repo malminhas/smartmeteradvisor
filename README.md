@@ -15,11 +15,11 @@ There are two primary terraform recipes.  They both do broadly the same thing wh
 
 Terraform does not take `.tf` files as arguments directly but instead reads all `.tf` files in the working directory.  Therefore the original recipe has been renamed as `main.tf.original`](main.tf.original) to ensure you don't hit that scenario.  If you want to run the original recipe you must rename or move [`main.tf`](main.tf).
 
-Here's the command line for executing the other one after doing that:
+Here's the command line for executing the primary terraform recipe:
 ```
 $ terraform destroy -auto-approve && terraform apply -auto-approve
 ```
-A separate private `terraform.tfvars` file contains all the secrets used by both the primary .tf files.  Here's an outline of what it contains per the descriptions in [`variables.tf`](variables.tf):
+A separate **private** `terraform.tfvars` file contains all the secrets used by both the primary .tf files.  Here's an outline of what it contains per the descriptions in [`variables.tf`](variables.tf):
 ```
 droplet_ip          = "<IP address of Droplet>"
 private_key_path    = "<path to private SSH key for accessing Droplet>"
