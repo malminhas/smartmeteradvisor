@@ -1,0 +1,6 @@
+BACKUPS
+*.ORIG
+*tfvars
+*key*
+*~
+*terraform*
