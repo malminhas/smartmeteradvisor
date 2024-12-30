@@ -145,9 +145,14 @@ cat > /etc/caddy/Caddyfile << 'EOF'
 
 # Handle both domain and IP access
 (common) {
-    reverse_proxy localhost:8080 {
-        header_up Host {http.request.host}
-        header_up X-Real-IP {http.request.remote.host}
+    # Add Smart Meter proxy
+    handle /energy-assistant/* {
+	reverse_proxy localhost:8081
+    }
+
+    # Existing WordPress proxy
+    handle /* {
+	reverse_proxy localhost:8080
     }
 }
 
