@@ -13,7 +13,7 @@ There are two primary terraform recipes.  They both do broadly the same thing wh
 * [`main.tf.original`](main.tf.original): Initial version with basic outline and no logging.
 * [`main.tf`](main.tf): Advanced version with enhanced logging and support around DNS propagation checks.
 
-Terraform does not take `.tf` files as arguments directly but instead reads all `.tf` files in the working directory.  Therefore the original recipe has been renamed as `main.tf.original`](main.tf.original) to ensure you don't hit that scenario.  If you want to run the original recipe you must rename or move [`main.tf`](main.tf).
+Terraform does not take `.tf` files as arguments directly but instead reads all `.tf` files in the working directory.  Therefore the original recipe has been renamed as [`main.tf.original`](main.tf.original) to ensure you don't hit that scenario.  If you want to run the original recipe you must rename or move [`main.tf`](main.tf).
 
 Here's the command line for executing the primary terraform recipe:
 ```
